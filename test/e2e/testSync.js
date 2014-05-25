@@ -13,7 +13,7 @@ describe('Test Http backend synchronisations methods', function() {
         backend = new HttpBackend(browser, { autoSync: true});
         backend.whenGET(/result/).respond('result');
 
-        browser.get('http://127.0.0.1:8080');
+        browser.get('/');
         element(by.css('#buttonGET')).click();
 
         backend.whenGET(/result/).respond('resultAfterInit');
@@ -27,7 +27,7 @@ describe('Test Http backend synchronisations methods', function() {
         backend = new HttpBackend(browser, { autoSync: false});
         backend.whenGET(/result/).respond('result');
 
-        browser.get('http://127.0.0.1:8080');
+        browser.get('/');
 
         backend.whenGET(/result/).respond('resultAfterInit');
         element(by.css('#buttonGET')).click();
@@ -40,7 +40,7 @@ describe('Test Http backend synchronisations methods', function() {
         backend = new HttpBackend(browser, { autoSync: false});
         backend.whenGET(/result/).respond('result');
 
-        browser.get('http://127.0.0.1:8080');
+        browser.get('/');
         element(by.css('#buttonGET')).click();
 
         backend.whenGET(/result/).respond('resultAfterInit');

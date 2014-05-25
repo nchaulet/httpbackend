@@ -11,7 +11,7 @@ describe('Test Http backend methods', function() {
     it('Test whenGET with string url', function() {
         backend.whenGET("/result").respond('raoul');
 
-        browser.get('http://127.0.0.1:8080');
+        browser.get('/');
         
 
         element(by.css('#buttonGET')).click();
@@ -23,7 +23,7 @@ describe('Test Http backend methods', function() {
     it('Test whenGET with string response', function() {
         backend.whenGET(/result/).respond('raoul');
 
-        browser.get('http://127.0.0.1:8080');
+        browser.get('/');
         
 
         element(by.css('#buttonGET')).click();
@@ -35,7 +35,7 @@ describe('Test Http backend methods', function() {
     it('Test whenPOST with string response', function() {
         backend.whenPOST(/result/).respond('raoul');
         
-        browser.get('http://127.0.0.1:8080');
+        browser.get('/');
 
         element(by.css('#buttonPOST')).click();
 
@@ -48,7 +48,7 @@ describe('Test Http backend methods', function() {
             return [200, data];
         });
 
-        browser.get('http://127.0.0.1:8080');
+        browser.get('/');
 
         element(by.css('#buttonPOST')).click();
 
@@ -60,7 +60,7 @@ describe('Test Http backend methods', function() {
         backend.whenPOST(/result/).respond('raoulPOST');
         backend.whenGET(/result/).respond('raoulGET');
 
-        browser.get('http://127.0.0.1:8080');
+        browser.get('/');
 
         element(by.css('#buttonGET')).click();
 
