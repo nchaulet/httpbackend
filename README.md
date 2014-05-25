@@ -2,6 +2,15 @@
 
 Http backend mock module for protractor
 
+## instalation
+
+```shell
+npm install httpbackend
+```
+
+include angular mock script
+https://github.com/angular/bower-angular-mocks
+
 ## Simple Usage
 
 ```javascript
