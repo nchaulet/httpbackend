@@ -9,7 +9,7 @@ describe('Test Http backend methods', function() {
     });
 
     it('Test whenGET with string url', function() {
-        backend.whenGET("/result").respond('raoul');
+        backend.whenGET("/result.json").respond('raoul');
 
         browser.get('/');
         
@@ -18,6 +18,17 @@ describe('Test Http backend methods', function() {
 
         var result = element(by.binding('result'));
         expect(result.getText()).toEqual('raoul');
+    });
+
+    it('Test whenGET with passThrough', function() {
+        backend.whenGET("/result.json").passThrough();
+        browser.get('/');
+        
+
+        element(by.css('#buttonGET')).click();
+
+        var result = element(by.binding('result'));
+        expect(result.getText()).toEqual('resultFromServer');
     });
 
     it('Test whenGET with string response', function() {

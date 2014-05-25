@@ -19,13 +19,13 @@
 			$scope.result = 'default';
 
 			$scope.getResult = function() {
-				$http.get('/result').then(function(data) {
+				$http.get('/result.json').then(function(data) {
 					$scope.result = data.data;
 				});
 			};
 
 			$scope.postResult = function() {
-				$http.post('/result', 'postedData').then(function(data) {
+				$http.post('/result.json', 'postedData').then(function(data) {
 					$scope.result = data.data;
 				});
 			};
