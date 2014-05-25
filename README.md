@@ -37,13 +37,18 @@ describe('Test Http backend methods', function() {
 });
 ```
 
-## Advanced Usage (TODO)
+## Advanced Usage
+
+@TODO
+
+### Workflow
 
 ## Development and test
 
 Init project
 ```shell
 bower install
+npm install
 ````
 
 ## Licence
