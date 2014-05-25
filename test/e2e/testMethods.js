@@ -8,6 +8,18 @@ describe('Test Http backend methods', function() {
         backend.reset();
     });
 
+    it('Test whenGET with string url', function() {
+        backend.whenGET("/result").respond('raoul');
+
+        browser.get('http://127.0.0.1:8080');
+        
+
+        element(by.css('#buttonGET')).click();
+
+        var result = element(by.binding('result'));
+        expect(result.getText()).toEqual('raoul');
+    });
+
     it('Test whenGET with string response', function() {
         backend.whenGET(/result/).respond('raoul');
 
