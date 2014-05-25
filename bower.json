@@ -1,0 +1,13 @@
+{
+  "name": "httpbackend",
+  "version": "0.0.0",
+  "authors": [
+    "Nicolas Chaulet <n.chaulet@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "angular": "~1.2.16",
+    "angular-mocks": "~1.2.16"
+  }
+}

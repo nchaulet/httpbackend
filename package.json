@@ -1,0 +1,15 @@
+{
+  "name": "httpbackend",
+  "version": "0.1.0",
+  "description": "Module for mock http request (http backend) with protractor for testing angular app",
+  "main": "lib/httpbackend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nchaulet",
+  "license": "MIT",
+  "dependencies": {
+    "protractor": "~0.23.1",
+    "lodash": "~2.4.1"
+  }
+}

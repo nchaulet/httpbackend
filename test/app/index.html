@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test app</title>
+</head>
+<body ng-app="testApp">
+	<div ng-controller="testController">
+		<button id ="buttonGET" ng-click="getResult()">GET</button>
+		<button id ="buttonPOST" ng-click="postResult()">POST</button>
+		<div ng-bind="result"></div>
+	</div>
+
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-mocks/angular-mocks.js"></script>
+	<script type="text/javascript">
+		var testApp = angular.module('testApp',[]);
+
+		testApp.controller('testController', ['$scope', '$http', function($scope, $http) {
+			$scope.result = 'default';
+
+			$scope.getResult = function() {
+				$http.get('/result').then(function(data) {
+					$scope.result = data.data;
+				});
+			};
+
+			$scope.postResult = function() {
+				$http.post('/result', 'postedData').then(function(data) {
+					$scope.result = data.data;
+				});
+			};
+		}]);
+	</script>
+</body>
+</html>
