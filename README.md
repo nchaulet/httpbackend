@@ -1,5 +1,7 @@
 # Http Backend
 
+[![Build Status](https://travis-ci.org/nchaulet/httpbackend.svg?branch=master)](https://travis-ci.org/nchaulet/httpbackend)
+
 Http backend mock module for protractor
 
 ## instalation
