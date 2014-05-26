@@ -4,7 +4,7 @@
   "description": "Module for mock http request (http backend) with protractor for testing angular app",
   "main": "lib/httpbackend.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/mocha test/units/"
   },
   "author": "nchaulet",
   "license": "MIT",
