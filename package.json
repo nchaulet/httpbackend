@@ -11,5 +11,9 @@
   "dependencies": {
     "protractor": "~0.23.1",
     "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.19.0",
+    "chai": "~1.9.1"
   }
 }
