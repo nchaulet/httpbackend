@@ -60,6 +60,11 @@ bower install
 npm install
 ````
 
+Launch test
+```shell
+npm test
+````
+
 ## Licence
 
 MIT
