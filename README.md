@@ -50,9 +50,26 @@ describe('Test Http backend methods', function() {
 
 ## Advanced Usage
 
-@TODO
-
 ### Workflow
+
+HttpBackend workflow is quite simple:
+
+* On browser.get()` a mock module is injected to your angularjs application
+* On `when*`or when you call manually `backend.sync()`, fixtures is synchronised with your angularjs app.
+
+### Increase perfomance
+
+For perfomance issue you can disable auto sync:
+
+```javascript
+    var backend = new HttpBackend(brower, {autoSync: false});
+
+    //Then you should manually call sync function
+    backend.whenGET(/results/).respond('raoul');
+    backend.whenGET(/responses/).respond('raoul');
+    backend.sync();
+
+``
 
 ## Development and test
 
