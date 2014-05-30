@@ -26,3 +26,4 @@ before_script:
   - "export DISPLAY=:99.0"
   - "Xvfb :99.0 -extension RANDR > /dev/null &"
   - "sudo chmod 1777 /dev/shm"
+  - ./node_modules/.bin/webdriver-manager update
