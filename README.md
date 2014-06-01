@@ -71,6 +71,13 @@ For perfomance issue you can disable auto sync:
 
 ``
 
+### Httpbackend Methods
+
+* `when GET, POST, HEAD, PUT, JSONP` add a fixtures, accept literal object, or a callback
+* `sync`, manualy sync fixtures
+* `reset`, reset all fixture
+* `clear`, clear http backend module
+
 ## Development and test
 
 Init project
