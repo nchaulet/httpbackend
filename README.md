@@ -17,11 +17,15 @@ https://github.com/angular/bower-angular-mocks
 
 ```javascript
 var HttpBackend = require('httpbackend');
-var backend = new HttpBackend(browser);
+var backend = null;
 
 describe('Test Http backend methods', function() {
+	beforeEach(function() {
+		backend = new HttpBackend(browser);
+	});
+	
 	afterEach(function() {
-		backend.reset();
+		backend.clear();
 	});
 
 	it('Test whenGET with string response', function() {
