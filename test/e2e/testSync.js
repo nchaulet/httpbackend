@@ -6,7 +6,7 @@ var browserGet = browser.get;
 
 describe('Test Http backend synchronisations methods', function() {
     afterEach(function() {
-        browser.get = browserGet;
+        backend.clear();
     });
 
     it('Test whenGET with auto sync', function() {

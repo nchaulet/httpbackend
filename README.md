@@ -17,12 +17,16 @@ https://github.com/angular/bower-angular-mocks
 
 ```javascript
 var HttpBackend = require('httpbackend');
-var backend = new HttpBackend(browser);
+var backend = null;
 
 describe('Test Http backend methods', function() {
-	afterEach(function() {
-		backend.reset();
-	});
+    beforeEach(function() {
+        backend = new HttpBackend(browser);
+    });
+
+    afterEach(function() {
+        backend.clear();
+    });
 
 	it('Test whenGET with string response', function() {
 		backend.whenGET(/result/).respond('raoul');
@@ -75,8 +79,8 @@ For perfomance issue you can disable auto sync:
 
 * `when GET, POST, HEAD, PUT, JSONP` add a fixtures, accept literal object, or a callback
 * `sync`, manualy sync fixtures
-* `reset`, reset all fixture
 * `clear`, clear http backend module
+* `reset`, reset all fixture
 
 ## Development and test
 

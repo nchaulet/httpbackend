@@ -1,18 +1,21 @@
 var HttpBackend = require('../../lib/httpbackend');
 
 var browserGet = browser.get;
-var backend = new HttpBackend(browser);
+var backend = null;
 
 describe('Test Http backend methods', function() {
+    beforeEach(function() {
+        backend = new HttpBackend(browser);
+    });
+
     afterEach(function() {
-        backend.reset();
+        backend.clear();
     });
 
     it('Test whenGET with string url', function() {
         backend.whenGET("/result.json").respond('raoul');
 
         browser.get('/');
-        
 
         element(by.css('#buttonGET')).click();
 
