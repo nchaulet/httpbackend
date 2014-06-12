@@ -13,16 +13,4 @@ describe('HttpRequest', function() {
 			request.method.should.equal('GET');
 		});
 	});
-
-	describe('#buildRequestmethod', function() {
-		it('should work with string uri', function() {
-			var request = new HttpRequest('GET', '/test');
-			request.buildRequestmethod().should.equal('whenGET("/test")');
-		});
-
-		it('should work with regex uri', function() {
-			var request = new HttpRequest('GET', /test/);
-			request.buildRequestmethod().should.equal('whenGET(/test/)');
-		});
-	});
 });
