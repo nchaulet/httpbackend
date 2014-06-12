@@ -4,7 +4,7 @@
 
 Http backend mock module for protractor
 
-## instalation
+## Installation
 
 ```shell
 npm install httpbackend
@@ -20,6 +20,7 @@ var HttpBackend = require('httpbackend');
 var backend = null;
 
 describe('Test Http backend methods', function() {
+
     beforeEach(function() {
         backend = new HttpBackend(browser);
     });
@@ -73,7 +74,7 @@ For perfomance issue you can disable auto sync:
     backend.whenGET(/responses/).respond('raoul');
     backend.sync();
 
-``
+```
 
 ### Httpbackend Methods
 
