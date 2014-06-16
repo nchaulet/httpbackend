@@ -1,6 +1,6 @@
 {
   "name": "httpbackend",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Module for mock http request (http backend) with protractor for testing angular app",
   "main": "lib/httpbackend.js",
   "scripts": {
@@ -10,7 +10,10 @@
   "license": "MIT",
   "dependencies": {
     "protractor": "~0.23.1",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "grunt-mocha-test": "~0.10.2",
+    "mocha": "~1.19.0",
+    "grunt-contrib-connect": "~0.7.1"
   },
   "devDependencies": {
     "mocha": "~1.19.0",
