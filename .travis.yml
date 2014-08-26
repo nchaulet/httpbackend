@@ -8,6 +8,7 @@ before_script:
   - 'npm install -g bower'
   - 'npm install -g grunt-cli'
   - 'bower install --config.interactive=false'
+  - "sudo apt-get update"
   - "sudo apt-get remove chromium-browser"
   - "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections"
   - "sudo apt-get install ttf-mscorefonts-installer"
