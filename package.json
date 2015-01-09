@@ -1,6 +1,6 @@
 {
   "name": "httpbackend",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Module for mock http request (http backend) with protractor for testing angular app",
   "main": "lib/httpbackend.js",
   "scripts": {
