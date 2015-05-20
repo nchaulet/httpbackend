@@ -1,8 +1,12 @@
 {
   "name": "httpbackend",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Module for mock http request (http backend) with protractor for testing angular app",
   "main": "lib/httpbackend.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nchaulet/httpbackend.git"
+  },
   "scripts": {
     "test": "node_modules/.bin/grunt test"
   },
