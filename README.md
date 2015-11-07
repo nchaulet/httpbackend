@@ -91,6 +91,11 @@ bower install
 npm install
 ````
 
+Update Webdriver (used by Grunt)
+```shell
+./node_modules/.bin/webdriver-manager update
+```
+
 Launch test
 ```shell
 npm test
