@@ -67,7 +67,7 @@ HttpBackend workflow is quite simple:
 For perfomance issue you can disable auto sync:
 
 ```javascript
-    var backend = new HttpBackend(brower, {autoSync: false});
+    var backend = new HttpBackend(browser, {autoSync: false});
 
     //Then you should manually call sync function
     backend.whenGET(/results/).respond('raoul');
